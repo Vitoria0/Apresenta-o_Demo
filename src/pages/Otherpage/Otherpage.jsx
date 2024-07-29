@@ -4,6 +4,7 @@ import { Envie } from '../../assets/svg/envie';
 import { Primary } from '../../components/Botao/PrimaryButton';
 import { Box, Typography, TextField } from '@mui/material';
 import backgroundImage from '../../assets/img/Email.png';
+import {ZoomIn} from '../../components/Animations/ZoomIn';
 
 const OtherPage = () =>{
 	const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ const OtherPage = () =>{
 					alignItems: {xs:'center', md:'end'},
 				}}> 
 						<Box 
-						  onClick={() => window.open('http://surl.li/rvmicc', '_blank')}
+						  onClick={() => window.open('https://wa.me/qr/WBKCG4NBT6HPG1', '_blank')}
 							sx={{
 								width: '2rem',
 								aspectRatio: 1/1,
@@ -88,6 +89,7 @@ const OtherPage = () =>{
 						</svg>
 					</Box>
 				</Box>
+				
 				<Box sx={{
 					width:{xs:'80%', md: '30%'},
 					padding:{xs:'1rem 2rem', md:'2rem 4rem'},
@@ -103,6 +105,7 @@ const OtherPage = () =>{
 						}}>
 						<Envie/> 
 					</Box>
+					<ZoomIn direction='in'>
 					<form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column',   }}>
 					<TextField
                         id="nome"
@@ -139,6 +142,7 @@ const OtherPage = () =>{
                         Enviar
                     </Primary>
                 </form>
+				</ZoomIn>
 				</Box>
 			 	<Box sx={{
 					width:'80%',
